@@ -1,0 +1,67 @@
+/* CollapsibleExample.css */
+.container{
+    padding-right: 10%;
+        padding-Left: 10%;
+        max-Width: 100%; 
+}
+.navbar-custom {
+    background: linear-gradient(90deg, #1a2a44, #0f1c2e);
+    position: relative;
+    padding: 0 15px;
+  }
+  
+  .navbar-brand-custom {
+    position: relative;
+    top: 10px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand-custom:hover {
+    transform: scale(1.05);
+  }
+  
+  .navbar-brand-logo {
+    display: block;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    background-color: #1a2a44;
+    margin-left: -20px;
+  }
+  
+  .nav-link-custom {
+    margin: 0 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link-custom:hover {
+    color: #00b7eb;
+  }
+  
+  /* Responsive */
+  @media (max-width: 991px) { 
+    .navbar-nav {
+      text-align: center !important; 
+      margin: 0 auto !important; 
+      display: flex;
+      justify-content: center;
+      flex-direction: column; 
+      padding: 10px 0; 
+    }
+    .nav-link-custom {
+      margin: 5px 0 !important; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-brand-custom {
+      top: 10px !important; 
+    }
+    .navbar-brand-logo {
+      width: 120px !important; 
+      height: 120px !important;
+      margin-right: 30px;
+    }
+  }
+  
