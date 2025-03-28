@@ -1,11 +1,29 @@
 .content {
-    min-height: 60vh;  /* Ajusta la altura del contenido */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background: #1a2a44;
+  min-height: 100vh; /* Asegura que el contenido mínimo sea el tamaño de la pantalla */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  background: #1a2a44;
+  margin-bottom: 0;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .content {
+      min-height: auto; /* Ajuste dinámico */
+      overflow: visible;
+      padding-bottom: 80px; 
   }
-  
+}
+
+@media (min-width: 768px) {
+  .content {
+      min-height: auto;
+      overflow: visible;
+      padding-bottom: 80px; 
+  }
+}

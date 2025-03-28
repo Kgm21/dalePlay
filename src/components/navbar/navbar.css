@@ -5,10 +5,14 @@
         max-Width: 100%; 
 }
 .navbar-custom {
-    background: linear-gradient(90deg, #1a2a44, #0f1c2e);
-    position: relative;
-    padding: 0 15px;
-  }
+  background: linear-gradient(90deg, #1a2a44, #0f1c2e);
+  position: relative;
+  padding: 0 15px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  z-index: 10; /* Asegura que el nav esté sobre la imagen */
+}
+
   
   .navbar-brand-custom {
     position: relative;

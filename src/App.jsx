@@ -1,29 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import CollapsibleExample from './components/navbar/navbar'
-import Footer from "./components/footer/footer"
+import CollapsibleExample from './components/navbar/navbar';
+import Main_page from './components/main_page/main_image';
+import CategoriasPeliculas from './components/categorias_main/main_categorias';
+import Footer from "./components/footer/footer";
+import { Row, Col } from 'react-bootstrap'; // Importa Row y Col
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-          <CollapsibleExample/>
-          {/* Contenido de prueba */}
+      <CollapsibleExample />
       <div className="content">
-        <h1>Bienvenido a DalePlay</h1>
-        <p>Explora nuestro catálogo de películas y series.</p>
+        <Main_page />
+        <CategoriasPeliculas/>
       </div>
-
-          <Footer/>
-
-          
-          
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

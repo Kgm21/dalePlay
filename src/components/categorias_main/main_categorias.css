@@ -1,0 +1,85 @@
+.tarjeta-pelicula-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.tarjeta-pelicula {
+    position: relative;
+    text-align: center;
+    height: auto; /* Ajusta según el contenido */
+}
+
+
+.tarjeta-pelicula img {
+    width: 100%;
+    height: 250px; /* Ajusta el tamaño de la imagen */
+    border-radius: 8px;
+    display: block;
+}
+
+  
+  .tarjeta-pelicula .card {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+  }
+  
+  .tarjeta-pelicula .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Se ajusta al tamaño de la imagen */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px; /* Para que coincida con la imagen */
+    z-index: 2; 
+}
+
+.card-overlay-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.card-overlay-descripcion {
+    font-size: 1rem;
+    margin-bottom: 20px; /* Agrega espacio inferior para mayor separación */
+}
+
+  
+  .tarjeta-pelicula:hover .card-overlay {
+    opacity: 1;
+  }
+  
+
+  
+  h2 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .categorias-peliculas {
+    background-color: #121212;
+  }
+  
+@media (max-width: 768px) {
+    .content {
+        min-height: auto; /* Ajuste dinámico */
+        overflow: visible;
+        padding-bottom: 80px; 
+    }
+    .tarjeta-pelicula{
+        margin-top: 10px;
+    }
+  }

@@ -36,7 +36,7 @@ const Footer = () => {
         {/* Copyright */}
         <Row className="mt-3">
           <Col className="text-center">
-            <p className="mb-0">© 2025 DalePLay. Todos los derechos reservados.</p>
+            <p className="mb-0 mt-3">© 2025 DalePLay. Todos los derechos reservados.</p>
           </Col>
         </Row>
       </Container>
