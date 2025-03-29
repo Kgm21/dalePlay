@@ -1,85 +1,106 @@
+.tarjeta-pelicula-container-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.flecha-izquierda,
+.flecha-derecha {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.flecha-izquierda {
+  left: 0;
+}
+
+.flecha-derecha {
+  right: 0;
+}
+
+.flecha-izquierda:hover,
+.flecha-derecha:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .tarjeta-pelicula-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
 .tarjeta-pelicula {
-    position: relative;
-    text-align: center;
-    height: auto; /* Ajusta según el contenido */
+  width: 250px;
+  height: 300px; 
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-
-.tarjeta-pelicula img {
-    width: 100%;
-    height: 250px; /* Ajusta el tamaño de la imagen */
-    border-radius: 8px;
-    display: block;
+.card {
+  border: none;
+  width: 100%;
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
 }
 
-  
-  .tarjeta-pelicula .card {
-    background-color: transparent;
-    border: none;
-    height: 100%;
-  }
-  
-  .tarjeta-pelicula .card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Se ajusta al tamaño de la imagen */
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 8px; /* Para que coincida con la imagen */
-    z-index: 2; 
+.card-img-top {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  object-position: center;
 }
 
-.card-overlay-titulo {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.card-overlay-titulo,
 .card-overlay-descripcion {
-    font-size: 1rem;
-    margin-bottom: 20px; /* Agrega espacio inferior para mayor separación */
+  margin: 5px 0;
+  text-align: center;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-  
-  .tarjeta-pelicula:hover .card-overlay {
-    opacity: 1;
-  }
-  
-
-  
-  h2 {
-    color: white;
-    margin-bottom: 20px;
-    text-align: left;
-    margin-top: 20px;
-  }
-  
-  .categorias-peliculas {
-    background-color: #121212;
-  }
-  
-@media (max-width: 768px) {
-    .content {
-        min-height: auto; /* Ajuste dinámico */
-        overflow: visible;
-        padding-bottom: 80px; 
-    }
-    .tarjeta-pelicula{
-        margin-top: 10px;
-    }
-  }
+.card-overlay-titulo{
+  font-size: 24px;
+}
+.card-overlay-descripcion{
+  font-size: 14px;
+}
+.text_categoria{
+  text-align:left;
+  margin-top: 10px;
+  padding: 15px;
+}
