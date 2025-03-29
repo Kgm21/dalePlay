@@ -17,9 +17,9 @@ const Footer = () => {
           {/* Navegación */}
           <Col lg={4} md={3} sm={12} className="mb-3 mb-md-0 text-center">
             <Nav className="d-flex flex-column align-items-center">
-              <Nav.Link href="#inicio" className="nav-link-custom">Inicio</Nav.Link>
-              <Nav.Link href="#nosotros" className="nav-link-custom">Nosotros</Nav.Link>
-              <Nav.Link href="#contacto" className="nav-link-custom">Contacto</Nav.Link>
+              <Nav.Link href="/inicio" className="nav-link-custom">Inicio</Nav.Link>
+              <Nav.Link href="/nosotros" className="nav-link-custom">Nosotros</Nav.Link>
+              <Nav.Link href="/contacto" className="nav-link-custom">Contacto</Nav.Link>
             </Nav>
           </Col>
 

@@ -1,27 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route } from 'react-router';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
-import CollapsibleExample from './components/navbar/navbar'
+import Navbarcom from './components/navbar/navbar'
+import Nosotros from "./paginas/nosotros/nosotros"
 import Footer from "./components/footer/footer"
+import Inicio from './paginas/inicio/inicio';
+import Administracion from './paginas/administracion/administracion';
+import Registro from './paginas/registro/registro';
+import Contacto from './paginas/contacto/contacto';
+import IniciarSesion from './paginas/IniciarSesion/iniciarSesion';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-          <CollapsibleExample/>
-          {/* Contenido de prueba */}
-      <div className="content">
-        <h1>Bienvenido a DalePlay</h1>
-        <p>Explora nuestro catálogo de películas y series.</p>
-      </div>
+      <Navbarcom />
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path='/inicio' element={<Inicio />} />
+          <Route path='/iniciarsesion' element={<IniciarSesion />} />
+          <Route path='/registro' element={<Registro />} />
+          <Route path='/nosotros' element={<Nosotros />} />
+          <Route path='/contacto' element={<Contacto />} />
+          <Route path='/administracion' element={<Administracion />} />
+        </Routes>
+      </BrowserRouter>
 
-          <Footer/>
+      <Footer />
 
-          
-          
+
+
     </>
   )
 }
