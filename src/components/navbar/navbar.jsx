@@ -5,7 +5,7 @@ import React from 'react';
 import "./navbar.css";
 
 
-function CollapsibleExample() {
+function Navbarcom() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar-custom">
 
@@ -16,9 +16,10 @@ function CollapsibleExample() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto me-6">
-              <Nav.Link href="#inicio" className="nav-link-custom">Inicio</Nav.Link>
-              <Nav.Link href="#login" className="nav-link-custom">Iniciar Sesión</Nav.Link>
-              <Nav.Link href="#registro" className="nav-link-custom">Registro</Nav.Link>
+              <Nav.Link href="/inicio" className="nav-link-custom">Inicio</Nav.Link>
+              <Nav.Link href="/iniciarSesion" className="nav-link-custom">Iniciar Sesión</Nav.Link>
+              <Nav.Link href="/registro" className="nav-link-custom">Registro</Nav.Link>
+              <Nav.Link href="/administracion" className="nav-link-custom">Administración</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>
@@ -54,4 +55,4 @@ function CollapsibleExample() {
   );
 }
 
-export default CollapsibleExample;
+export default Navbarcom;
