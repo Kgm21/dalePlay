@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./navbar.css";
 
 
@@ -10,7 +11,7 @@ function Navbarcom() {
     <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar-custom">
 
       <Container id='container' > 
-        <Navbar.Brand href="#home" className="navbar-brand-custom">
+        <Navbar.Brand href="/inicio" className="navbar-brand-custom">
             <img src="./img1.png" alt="Logo" width="160" height="160" className="navbar-brand-logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

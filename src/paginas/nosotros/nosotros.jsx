@@ -30,7 +30,7 @@ const equipo = [
 // componente unico nosotros
 const Nosotros = () => {
   return (
-   <Container className="py-5">
+   <Container className="py-5 content">
       <header className="text-center mb-5">
          <h2 className="pb-3 fw-bold text-center">Explora el universo de las películas con nosotros</h2>
          <p className="fs-5 text-center">
