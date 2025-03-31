@@ -14,7 +14,7 @@ const IniciarSesion = () => {
 
   return (
     <Container className="container">
-      <Row className="d-flex justify-content-start">
+      <Row className="d-flex justify-content-start row ">
         <Col md={4}>
           <div className="form-container">
             <h2 className="text-center">Iniciar Sesión</h2>

@@ -1,8 +1,9 @@
+
 .navbar-custom {
   background: linear-gradient(90deg, #1a2a44, #0f1c2e);
   position: relative;
   margin-bottom: 0;
-  padding: 1px 10px; /* Reducido al mínimo */
+  padding: 1px 10px; 
   z-index: 10;
  
 }
@@ -12,10 +13,9 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
   border-radius: 50%;
   background-color: #1a2a44;
-  margin: 0; /* Eliminado el margen */
-  padding: 0; /* Eliminado el padding */
-  width: 120px; /* Tamaño reducido */
-  height: 120px; /* Tamaño reducido */
+  margin: 0; 
+  padding: 0; 
+
 }
 
 .nav-link-custom {
@@ -27,13 +27,13 @@
 
 @media (max-width: 991px) {
   .navbar-custom {
-    min-height: 30px; /* Reducido al mínimo */
-    padding: 1px 8px; /* Reducido al mínimo */
+    min-height: 30px; 
+    padding: 1px 8px; 
   }
 
   .navbar-brand-logo {
-    width: 80px; /* Tamaño aún más reducido */
-    height: 80px; /* Tamaño aún más reducido */
+    width: 100px; 
+    height: 100px;
   }
   .nav-link-custom {
     margin: 0 5px;
@@ -46,8 +46,8 @@
 
 @media (max-width: 576px) {
   .navbar-custom {
-    min-height: 40px; /* Reducido al mínimo */
-    padding: 1px 5px; /* Reducido al mínimo */
+    min-height: 40px; 
+    padding: 1px 5px; 
   }
   .nav-link-custom {
     margin: 0 5px;
@@ -57,18 +57,18 @@
     text-align: center;
   }
   .navbar-brand-logo {
-    width: 80px; /* Tamaño aún más reducido */
-    height: 80px; /* Tamaño aún más reducido */
+    width: 100px; 
+    height: 100px; 
   }
 }
 @media (min-width: 1020px) {
   .navbar-custom {
-    max-height: 120px; /* Reducido al mínimo */
-    padding: 1px 5px; /* Reducido al mínimo */
+    max-height: 120px; 
+    padding: 1px 5px; 
   }
   .navbar-brand-logo {
-    width: 140px; /* Tamaño aún más reducido */
-    height: 140px; /* Tamaño aún más reducido */
+    width: 140px; 
+    height: 140px; 
     margin-top: 25px;
   }
 }
