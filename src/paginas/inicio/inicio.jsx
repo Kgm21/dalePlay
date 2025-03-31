@@ -1,12 +1,18 @@
-import React from 'react'
+import { useState } from 'react';
+import './inicio.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col, Button } from 'react-bootstrap'; // Import necessary Bootstrap components
+import MainPage from '../../components/main_page/main_image';
+import CategoriasPeliculas from '../../components/categorias_main/main_categorias'
 
 const Inicio = () => {
   return (
-   <div className="content">
-   <h1>Bienvenido a DalePlay</h1>
-   <p>Explora nuestro catálogo de películas y series.</p>
- </div>
-  )
-}
+    <div className='content'>
+      <MainPage />
+      <CategoriasPeliculas/>
 
-export default Inicio
+    </div>
+  );
+};
+
+export default Inicio; 

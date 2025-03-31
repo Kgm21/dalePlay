@@ -1,0 +1,34 @@
+.main_page {
+  background-image: url('/lcdp.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  padding: 80px 40px;
+}
+
+@media (min-width: 1200px) { 
+  .main_page {
+      padding: 150px 100px; 
+  }
+}
+
+.play-button {
+  background-color: #80cbc4; /* Color de acento */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.mainPage-content h1 {
+  font-size: 3.5em; 
+  line-height: 1.5; 
+}
+
+.description {
+  font-size: 1.2em; 
+  line-height: 1.6; 
+}

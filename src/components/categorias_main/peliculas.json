@@ -1,0 +1,119 @@
+[
+    {
+      "categoria": "Categoría 1",
+      "peliculas": [
+        {
+          "id": 1,
+          "titulo": "Anne",
+          "imagen": "anne.jpeg",
+          "descripcion": "Descripción de Anne"
+        },
+        {
+          "id": 2,
+          "titulo": "Interstellar",
+          "imagen": "interstellar.jpeg",
+          "descripcion": "Descripción de Interstellar"
+        },{
+          "id": 3,
+          "titulo": "Anne",
+          "imagen": "anne.jpeg",
+          "descripcion": "Descripción de Anne"
+        },
+        {
+          "id": 4,
+          "titulo": "Interstellar",
+          "imagen": "interstellar.jpeg",
+          "descripcion": "Descripción de Interstellar"
+        }
+   
+      ]
+    },
+    {
+      "categoria": "Categoría 2",
+      "peliculas": [
+        {
+          "id": 5,
+          "titulo": "Dunkerque",
+          "imagen": "dunkerque.jpeg",
+          "descripcion": "Descripción de Dunkerque"
+        },
+        {
+          "id": 6,
+          "titulo": "Miracle in Cell No. 7",
+          "imagen": "miracle-in-cell-no-7.jpeg",
+          "descripcion": "Descripción de Miracle in Cell No. 7"
+        }, {
+          "id": 7,
+          "titulo": "Dunkerque",
+          "imagen": "dunkerque.jpeg",
+          "descripcion": "Descripción de Dunkerque"
+        },
+        {
+          "id": 8,
+          "titulo": "Miracle in Cell No. 7",
+          "imagen": "miracle-in-cell-no-7.jpeg",
+          "descripcion": "Descripción de Miracle in Cell No. 7"
+        }
+      
+      ]
+    },
+    {
+      "categoria": "Categoría 3",
+      "peliculas": [
+        {
+          "id": 9,
+          "titulo": "Toc Toc",
+          "imagen": "toc-toc.jpeg",
+          "descripcion": "Descripción de Toc Toc"
+        },
+        {
+          "id": 10,
+          "titulo": "Overboard",
+          "imagen": "Overboard.webp",
+          "descripcion": "Descripción de Overboard"
+        },{ "id": 11,
+        "titulo": "Toc Toc",
+        "imagen": "toc-toc.jpeg",
+        "descripcion": "Descripción de Toc Toc"
+      },
+      {
+        "id": 12,
+        "titulo": "Overboard",
+        "imagen": "Overboard.webp",
+        "descripcion": "Descripción de Overboard"
+      }
+       
+      ]
+    },
+      {
+      "categoria": "Categoría 4",
+      "peliculas": [
+        {
+          "id": 13,
+          "titulo": "Dunkerque",
+          "imagen": "dunkerque.jpeg",
+          "descripcion": "Descripción de Dunkerque"
+        },
+        {
+          "id": 14,
+          "titulo": "Miracle in Cell No. 7",
+          "imagen": "miracle-in-cell-no-7.jpeg",
+          "descripcion": "Descripción de Miracle in Cell No. 7"
+        },
+        {
+          "id": 15,
+          "titulo": "Dunkerque",
+          "imagen": "dunkerque.jpeg",
+          "descripcion": "Descripción de Dunkerque"
+        },
+        {
+          "id": 16,
+          "titulo": "Miracle in Cell No. 7",
+          "imagen": "miracle-in-cell-no-7.jpeg",
+          "descripcion": "Descripción de Miracle in Cell No. 7"
+        }
+       
+      ]
+    }
+  
+  ]

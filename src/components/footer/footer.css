@@ -20,3 +20,20 @@
 .nav-link-custom:hover {
   color: #00b7eb;
 }
+
+.footer {
+  width: 100%; /* Ocupar todo el ancho */
+  background-color: #000; /* Ajusta según el diseño */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative; /* Evita que se superponga */
+  bottom: 0;
+  left: 0;
+}
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
