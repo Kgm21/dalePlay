@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
@@ -28,5 +32,18 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
-  }
+  },
+  "description": "proyecto 2 del curso de Rolling Code alumnos: Enzo Duran Nanci Guzman Karen Manchado",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kgm21/dalePlay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kgm21/dalePlay/issues"
+  },
+  "homepage": "https://github.com/Kgm21/dalePlay#readme"
 }

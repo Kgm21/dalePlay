@@ -1,71 +1,74 @@
-/* CollapsibleExample.css */
-.container{
-    padding-right: 10%;
-        padding-Left: 10%;
-        max-Width: 100%; 
-}
 .navbar-custom {
   background: linear-gradient(90deg, #1a2a44, #0f1c2e);
   position: relative;
-  padding: 0 15px;
   margin-bottom: 0;
-  padding-bottom: 0;
-  z-index: 10; /* Asegura que el nav esté sobre la imagen */
+  padding: 1px 10px; /* Reducido al mínimo */
+  z-index: 10;
+ 
 }
 
-  
-  .navbar-brand-custom {
-    position: relative;
-    top: 10px;
-    z-index: 1;
-    transition: transform 0.3s ease;
+.navbar-brand-logo {
+  display: block;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  background-color: #1a2a44;
+  margin: 0; /* Eliminado el margen */
+  padding: 0; /* Eliminado el padding */
+  width: 120px; /* Tamaño reducido */
+  height: 120px; /* Tamaño reducido */
+}
+
+.nav-link-custom {
+  margin: 0 5px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  font-size: 20px; 
+}
+
+@media (max-width: 991px) {
+  .navbar-custom {
+    min-height: 30px; /* Reducido al mínimo */
+    padding: 1px 8px; /* Reducido al mínimo */
   }
-  
-  .navbar-brand-custom:hover {
-    transform: scale(1.05);
-  }
-  
+
   .navbar-brand-logo {
-    display: block;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
-    background-color: #1a2a44;
-    margin-left: -20px;
+    width: 80px; /* Tamaño aún más reducido */
+    height: 80px; /* Tamaño aún más reducido */
   }
-  
   .nav-link-custom {
-    margin: 0 10px;
+    margin: 0 5px;
     color: #ffffff;
     transition: color 0.3s ease;
+    font-size: 24px;
+    text-align: center; 
   }
-  
-  .nav-link-custom:hover {
-    color: #00b7eb;
+}
+
+@media (max-width: 576px) {
+  .navbar-custom {
+    min-height: 40px; /* Reducido al mínimo */
+    padding: 1px 5px; /* Reducido al mínimo */
   }
-  
-  /* Responsive */
-  @media (max-width: 991px) { 
-    .navbar-nav {
-      text-align: center !important; 
-      margin: 0 auto !important; 
-      display: flex;
-      justify-content: center;
-      flex-direction: column; 
-      padding: 10px 0; 
-    }
-    .nav-link-custom {
-      margin: 5px 0 !important; 
-    }
+  .nav-link-custom {
+    margin: 0 5px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-size: 20px; 
+    text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .navbar-brand-custom {
-      top: 10px !important; 
-    }
-    .navbar-brand-logo {
-      width: 120px !important; 
-      height: 120px !important;
-      margin-right: 30px;
-    }
+  .navbar-brand-logo {
+    width: 80px; /* Tamaño aún más reducido */
+    height: 80px; /* Tamaño aún más reducido */
   }
-  
+}
+@media (min-width: 1020px) {
+  .navbar-custom {
+    max-height: 120px; /* Reducido al mínimo */
+    padding: 1px 5px; /* Reducido al mínimo */
+  }
+  .navbar-brand-logo {
+    width: 140px; /* Tamaño aún más reducido */
+    height: 140px; /* Tamaño aún más reducido */
+    margin-top: 25px;
+  }
+}
