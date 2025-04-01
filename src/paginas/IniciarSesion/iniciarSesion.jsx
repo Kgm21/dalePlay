@@ -5,7 +5,7 @@ import "./iniciarSesion.css";
 import usuarios from "./usuarios.json";
 import bcrypt from "bcryptjs";
 
-const IniciarSesion = () => {
+const IniciarSesion = ({ setUsuarioAutenticado }) => {
     const navigate = useNavigate();
     const [usuario, setUsuario] = useState("");
     const [contrasena, setContrasena] = useState("");
@@ -13,7 +13,6 @@ const IniciarSesion = () => {
 
     useEffect(() => {
         document.body.classList.add("login-page");
-
         return () => {
             document.body.classList.remove("login-page");
         };
@@ -21,26 +20,33 @@ const IniciarSesion = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError(""); // Limpia los errores anteriores
-        try{
+        setError(""); 
+
+        try {
             if (usuarios[usuario] && await bcrypt.compare(contrasena, usuarios[usuario].hash)) {
-                // Autenticación exitosa
-                if (usuarios[usuario].rol === "admin") {
+                const rol = usuarios[usuario].rol; 
+                
+               
+                localStorage.setItem("usuario", usuario);
+                localStorage.setItem("rol", rol);
+
+                setUsuarioAutenticado(true);
+
+                if (rol === "admin") {
                     navigate("/administracion");
                 } else {
                     navigate("/inicio");
                 }
-                setUsuario(""); // Limpia los campos
+
+                setUsuario("");
                 setContrasena("");
             } else {
                 setError("Usuario o contraseña incorrectos.");
-                
             }
-        } catch(error){
+        } catch (error) {
             setError("Error durante el inicio de sesión.");
             console.error("Error bcrypt compare:", error);
         }
-
     };
 
     return (

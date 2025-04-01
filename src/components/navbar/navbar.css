@@ -5,6 +5,9 @@
   padding: 1px 10px;
   z-index: 10;
 }
+.nav-link-custom{
+  text-align: center;
+}
 
 .navbar-brand-logo {
   display: block;
@@ -24,8 +27,8 @@
     padding: 1px 8px;
   }
   .navbar-brand-logo {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 130px;
   }
 }
 
@@ -35,9 +38,10 @@
     padding: 1px 5px;
   }
   .navbar-brand-logo {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 130px;
   }
+  
 }
 
 @media (min-width: 1020px) {
@@ -46,8 +50,8 @@
     padding: 1px 5px;
   }
   .navbar-brand-logo {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     margin-top: 25px;
   }
 }

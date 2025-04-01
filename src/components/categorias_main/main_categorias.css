@@ -107,3 +107,12 @@
   padding: 15px;
   color: aliceblue;
 }
+ 
+  @media (max-width: 768px) {
+    .tarjeta-pelicula-container-wrapper {
+      overflow-x: auto; /* Permite desplazamiento en pantallas pequeñas */
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+  }
+  

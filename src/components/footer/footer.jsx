@@ -1,16 +1,14 @@
 import React from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./footer.css";
 
-
-const Footer = () => {
+const Footer = ({ usuarioAutenticado }) => {
   return (
     <footer className="footer-custom">
       <Container fluid>
         <Row className="align-items-center text-center text-md-start">
-        
           {/* Logo */}
           <Col lg={4} md={4} sm={12} className="mb-3 mb-md-0 d-flex justify-content-center">
             <img src="/img1.png" alt="DalePLay Logo" className="footer-logo" />
@@ -19,9 +17,20 @@ const Footer = () => {
           {/* Navegación */}
           <Col lg={4} md={4} sm={12} className="mb-3 mb-md-0 text-center">
             <Nav className="d-flex flex-column align-items-center">
-              <Nav.Link href="/" className="nav-link-custom">Inicio</Nav.Link>
-              <Nav.Link href="/nosotros" className="nav-link-custom">Nosotros</Nav.Link>
-              <Nav.Link href="/contacto" className="nav-link-custom">Contacto</Nav.Link>
+              {/* Conditionally set the "Inicio" link based on usuarioAutenticado */}
+              <Nav.Link
+                as={Link}
+                to={usuarioAutenticado ? "/inicio" : "/"}
+                className="nav-link-custom"
+              >
+                Inicio
+              </Nav.Link>
+              <Nav.Link as={Link} to="/nosotros" className="nav-link-custom">
+                Nosotros
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contacto" className="nav-link-custom">
+                Contacto
+              </Nav.Link>
             </Nav>
           </Col>
 
@@ -32,7 +41,6 @@ const Footer = () => {
             <BsTwitter size={25} color="#1DA1F2" className="me-3" />
             <BsInstagram size={25} color="#E1306C" />
           </Col>
-
         </Row>
 
         {/* Copyright */}
