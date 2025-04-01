@@ -1,11 +1,32 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef} from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import peliculasIniciales from './peliculas.json'
 import './main_categorias.css';
-import peliculasData from './peliculas.json';
+
 
 function CategoriasPeliculas() {
   const contenedorPeliculasRefs = useRef({});
   const [desplazamientos, setDesplazamientos] = React.useState({});
+  
+
+ // Agrupar películas por categoría correctamente
+ const categorias = Object.values(
+  peliculasIniciales.reduce((acc, pelicula) => {
+    if (!acc[pelicula.categoria]) {
+      acc[pelicula.categoria] = {
+        categoria: pelicula.categoria,
+        peliculas: [],
+      };
+    }
+    acc[pelicula.categoria].peliculas.push({
+      id: pelicula.codigo,
+      titulo: pelicula.nombre,
+      imagen: pelicula.imagen,
+      descripcion: pelicula.descripcion,
+    });
+    return acc;
+  }, {})
+);
 
   useEffect(() => {
     const tarjetasPelicula = document.querySelectorAll('.tarjeta-pelicula');
@@ -95,8 +116,8 @@ function CategoriasPeliculas() {
 
   return (
     <Container fluid>
-      {peliculasData && Array.isArray(peliculasData) ? (
-        peliculasData.map((categoria) => (
+      {categorias && Array.isArray(categorias) ? (
+        categorias.map((categoria) => (
           <div key={categoria.categoria}>
             <Row>
               <Col xs={12}>
@@ -128,8 +149,9 @@ function CategoriasPeliculas() {
                           <Card>
                             <Card.Img
                               variant="top"
-                              src={pelicula.imagen || 'placeholder.jpg'}
+                              src={pelicula.imagen ? `/${pelicula.imagen}` : '/placeholder.jpg'} // Sin /images/
                               alt={pelicula.titulo || 'Sin título'}
+                              onError={(e) => (e.target.src = '/placeholder.jpg')} // Fallback
                             />
                           </Card>
                           <div className="card-overlay">
