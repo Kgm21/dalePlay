@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbarcom from './components/navbar/navbar'
@@ -10,29 +10,28 @@ import Registro from './paginas/registro/registro';
 import Contacto from './paginas/contacto/contacto';
 import IniciarSesion from './paginas/IniciarSesion/iniciarSesion';
 
+
 function App() {
 
-  return (
-    <>
-      <Navbarcom />
-      
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Inicio />} />
-          <Route path='/iniciarsesion' element={<IniciarSesion />} />
-          <Route path='/registro' element={<Registro />} />
-          <Route path='/nosotros' element={<Nosotros />} />
-          <Route path='/contacto' element={<Contacto />} />
-          <Route path='/administracion' element={<Administracion />} />
-        </Routes>
-      </BrowserRouter>
+    return (
+        <>
+            <Navbarcom />
 
-      <Footer />
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<IniciarSesion />} /> 
+                    <Route path='/inicio' element={<Inicio />} /> 
+                    <Route path='/registro' element={<Registro />} />
+                    <Route path='/nosotros' element={<Nosotros />} />
+                    <Route path='/contacto' element={<Contacto />} />
+                    <Route path='/administracion' element={<Administracion />} />
+                </Routes>
+            </BrowserRouter>
 
+            <Footer />
 
-
-    </>
-  );
+        </>
+    );
 }
 
 export default App;
