@@ -9,3 +9,7 @@ body {
    object-fit: cover; /* Esto asegura que la imagen se ajuste bien sin deformarse */
  }
  
+ .titulo{
+  color:white
+
+ }
