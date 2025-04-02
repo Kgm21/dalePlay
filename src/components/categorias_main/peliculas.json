@@ -4,7 +4,7 @@
     "nombre": "Una Esposa de Mentira",
     "categoria": "Comedia ",
     "descripcion": "Un cirujano plástico (Adam Sandler) finge estar casado y le pide a su asistente (Jennifer Aniston) que se haga pasar por su esposa para conquistar a otra mujer, lo que genera enredos divertidos.",
-    "imagen": "unaesposadementira.jpeg",
+    "imagen": "unaesposadementira.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -13,7 +13,7 @@
     "nombre": "¿Qué pasó ayer? ",
     "categoria": "Comedia ",
     "descripcion": "Un grupo de amigos despierta en las Vegas sin recuerdos de la noche anterior y sin el novio de la despedida de soltero. ",
-    "imagen": "quepasoayer.jpeg",
+    "imagen": "quepasoayer.jpg",
     "publicada": true,
     "destacada": false
   },
@@ -22,7 +22,7 @@
     "nombre": "La Máscara,1994",
     "categoria": "Comedia ",
     "descripcion": "Un tímido empleado de banco (Jim Carrey) encuentra una máscara mágica que lo transforma en un personaje extravagante con poderes caricaturescos. ",
-    "imagen": "lamascara.jpeg",
+    "imagen": "lamascara.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -32,7 +32,7 @@
     "nombre": "Cómo perder a un hombre en 10 días",
     "categoria": "Comedia ",
     "descripcion": "Una periodista intenta espantar a un hombre en 10 dias para un artículo, sin saber que él apuesta lo contrario.",
-    "imagen": "cmperder1hombre.jpeg",
+    "imagen": "cmperder1hombre.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -42,7 +42,7 @@
     "nombre": "La Propuesta",
     "categoria": "Comedia ",
     "descripcion": "Una jefa obliga a su asistente a fingir un matrimonio para evitar ser deportada, pero el plan se complica con el amor.",
-    "imagen": "lapropuesta.jpeg",
+    "imagen": "lapropuesta.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -51,7 +51,7 @@
     "nombre": "El Conjuro",
     "categoria": "Terror | Suspenso",
     "descripcion": "Basada en hechos reales, sigue a los investigadores paranormales Ed y Lorraine Warren, quienes ayudan a una familia aterrorizada por una presencia demoníaca en su casa.",
-    "imagen": "elconjuro.jpeg",
+    "imagen": "elconjuro.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -60,7 +60,7 @@
     "nombre": "La Monja",
     "categoria": "Terror | Suspenso",
     "descripcion": "Una monja y un sacerdote investigan una abadía en Rumania tras el suicidio de una hermana. Pronto descubren la presencia de Valak, una entidad demoníaca aterradora.",
-    "imagen": "lamonja,jpeg",
+    "imagen": "lamonja,jpg",
     "publicada": false,
     "destacada": false
   },
@@ -69,7 +69,7 @@
     "nombre": "Annbelle",
     "categoria": "Terror | Suspenso",
     "descripcion": "-Narra el origen de la muñeca poseída Annabelle, que causa eventos aterradores en la vida de una pareja tras ser maldecida por miembros de un culto satánico.",
-    "imagen": "anabelle.jpeg",
+    "imagen": "anabelle.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -78,7 +78,7 @@
     "nombre": "It(2017)",
     "categoria": "Terror | Suspenso",
     "descripcion": "Un grupo de niños enfrenta sus peores miedos cuando el aterrador payaso Pennywise emerge para aterrorizar su pueblo cada 27 años. Basada en la novela de Stephen King.",
-    "imagen": "it.jpeg",
+    "imagen": "it.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -87,7 +87,7 @@
     "nombre": "Alien:Romulus",
     "categoria": "Terror | Suspenso",
     "descripcion": "Ambientada entre Alien(1979) y Aliens(1986),combina terror y acción en la lucha por la supervivencia.",
-    "imagen": "alienromulus.jpeg",
+    "imagen": "alienromulus.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -96,7 +96,7 @@
     "nombre": "Avatar(2009)",
     "categoria": "Ciencia Ficción | Aventura",
     "descripcion": "Un soldado humano se infiltra en los Na´vi en el planeta Pandora, pero termina luchando por su supervivencia y la de su nuevo hogar.",
-    "imagen": "avatar.jpeg",
+    "imagen": "avatar.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -114,7 +114,7 @@
     "nombre": "Jurassic Park(1993)",
     "categoria": "Ciencia Ficción | Aventura",
     "descripcion": "Científicos crean dinosaurios clonados en un parque temático,pero todo se sale de control.",
-    "imagen": "jurassicpark.jpeg",
+    "imagen": "jurassicpark.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -132,7 +132,7 @@
     "nombre": "Los Vengadores(2012)",
     "categoria": "Ciencia Ficción | Aventura",
     "descripcion": "Los superhéroes más poderosos de la Tierra se unen para detener a Loki y salvar el mundo.",
-    "imagen": "vengadores.jpeg",
+    "imagen": "vengadores.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -141,7 +141,7 @@
     "nombre": "Emily in Paris",
     "categoria": "Series",
     "descripcion": "Una joven americana se muda a París por trabajo y navega entre el amor, la moda y la cultura francesa.",
-    "imagen": "emilyinparis.jpeg",
+    "imagen": "emilyinparis.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -150,7 +150,7 @@
     "nombre": "El Encargado",
     "categoria": "Series",
     "descripcion": "Un misterioso encargado de edificio manipula a los inquilinos mientras oculta oscuros secretos.",
-    "imagen": "encargado.jpeg",
+    "imagen": "encargado.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -159,7 +159,7 @@
     "nombre": "Dr. House",
     "categoria": "Series",
     "descripcion": "Un brillante pero sarcástico doctor resuelve casos médicos complejos con métodos poco convencionales.",
-    "imagen": "drhouse.jpeg",
+    "imagen": "drhouse.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -169,7 +169,7 @@
     "nombre": "Stranger Things",
     "categoria": "Series",
     "descripcion": "Un grupo de niños enfrenta fuerzas sobrenaturales cuando su amigo desaparece en un misterioso pueblo.",
-    "imagen": "strangerthings.jpeg",
+    "imagen": "strangerthings.jpg",
     "publicada": false,
     "destacada": false
   },
@@ -179,7 +179,7 @@
     "nombre": "Breaking Bad",
     "categoria": "Series",
     "descripcion": "Un profesor de química se convierte en narcotraficante tras ser diagnosticado con cáncer.",
-    "imagen": "breakingbad.jpeg",
+    "imagen": "breakingbad.jpg",
     "publicada": false,
     "destacada": false
   }
