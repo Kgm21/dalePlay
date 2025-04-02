@@ -1,6 +1,6 @@
 import React, { useEffect, useRef} from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import peliculasIniciales from './peliculas.json'
+import peliculasIniciales from '../Categorias_main/peliculas.json'
 import './main_categorias.css';
 
 
