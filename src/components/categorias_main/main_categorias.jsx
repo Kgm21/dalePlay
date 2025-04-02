@@ -1,6 +1,6 @@
 import React, { useEffect, useRef} from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import peliculasIniciales from './peliculas.json'
+import peliculas from '../../components/categorias_main/peliculas.json';
 import './main_categorias.css';
 
 
@@ -11,7 +11,7 @@ function CategoriasPeliculas() {
 
  // Agrupar películas por categoría correctamente
  const categorias = Object.values(
-  peliculasIniciales.reduce((acc, pelicula) => {
+  peliculas.reduce((acc, pelicula) => {
     if (!acc[pelicula.categoria]) {
       acc[pelicula.categoria] = {
         categoria: pelicula.categoria,
@@ -148,12 +148,12 @@ function CategoriasPeliculas() {
                         >
                           <Card>
                           <Card.Img
-  variant="top"
-  src={pelicula.imagen ? `/${pelicula.imagen}` : '/placeholder.jpg'}
-  alt={pelicula.titulo || 'Sin título'}
-  onError={(e) => (e.target.src = '/placeholder.jpg')}
-/>
-{console.log(pelicula.imagen)} 
+                             variant="top"
+                            src={pelicula.imagen ? `/${pelicula.imagen}` : '/images/placeholder.jpg'}
+                              alt={pelicula.titulo || 'Sin título'}
+                              onError={(e) => (e.target.src = '/images/placeholder.jpg')} // Fallback
+                                />
+
                           </Card>
                           <div className="card-overlay">
                             <div className="card-overlay-titulo"></div>
