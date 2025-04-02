@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Modal, Form } from 'react-bootstrap';
 import { BsStar, BsStarFill } from 'react-icons/bs';
-import peliculasIniciales from '../../components/Categorias_main/peliculas.json'; 
+import peliculasIniciales from '../../components/categorias_main/peliculas.json'; 
 import './administracion.css';
 
 const Administracion = () => {

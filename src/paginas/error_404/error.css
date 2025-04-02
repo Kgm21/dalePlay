@@ -1,6 +1,6 @@
-.content {
+.content-error{
     background-image: url('/error.jpg');
-    background-size: 70%; /* Reduce el tamaño de la imagen */
+    background-size: 70%; 
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
