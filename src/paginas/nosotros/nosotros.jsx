@@ -8,21 +8,21 @@ const equipo = [
       name: 'Karen',
       role: 'Scrun Master',
       description: 'Con un talento especial para la programación y la resolución de problemas, ella es la mente técnica detrás de Dale Play. Su capacidad para convertir líneas de código en funcionalidades que mejoran la experiencia del usuario es lo que hace posible este proyecto. Amante del cine y siempre buscando nuevas formas de innovar.',
-      image: '../../public/imgNosotros/avKaren.jpg',
+      image: '/imgNosotros/avKaren.jpg',
       bgColor: 'bg-body-secondary',
    },
    {
       name: 'Nancy',
       role: 'developer',
       description: 'Con un talento especial para la programación y la resolución de problemas, ella es la mente técnica detrás de RollingMovies. Su capacidad para convertir líneas de código en funcionalidades que mejoran la experiencia del usuario es lo que hace posible este proyecto. Amante del cine y siempre buscando nuevas formas de innovar.',
-      image: '../../public/imgNosotros/avNancy.jpg',
+      image: '/imgNosotros/avNancy.jpg',
       bgColor: 'bg-body-secondary',
    },
    {
       name: 'Enzo',
       role: 'developer',
       description: 'Con un enfoque estratégico y una visión clara, Enzo es el motor que impulsa a RollingMovies hacia adelante. Su pasión por el entretenimiento y la tecnología se traduce en cada detalle del proyecto. Enzo lidera con creatividad y entusiasmo, asegurándose de que el sitio refleje su misión de conectar a los usuarios con las mejores historias.',
-      image: '../../public/imgNosotros/avEnzo.png',
+      image: '/imgNosotros/avEnzo.png',
       bgColor: 'bg-body-secondary',
    },
 ];
@@ -32,7 +32,7 @@ const Nosotros = () => {
   return (
    <Container className="py-5 content">
       <header className="text-center mb-5">
-         <h2 className="pb-3 fw-bold text-center">Explora el universo de las películas con nosotros</h2>
+         <h2 className="pb-3 fw-bold text-center titulo">Explora el universo de las películas con nosotros</h2>
          <p className="fs-5 text-center">
          Adéntrate en el fascinante universo del cine con 'Dale Play'. Descubre historias que inspiran, emocionan y sorprenden, mientras exploras cada rincón de la magia cinematográfica. Con nosotros, cada película es más que entretenimiento: es una experiencia que conecta el arte con la pasión por lo extraordinario.
          </p>

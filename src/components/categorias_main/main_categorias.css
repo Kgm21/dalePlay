@@ -1,9 +1,11 @@
 .tarjeta-pelicula-container-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
+  position: relative; 
+  top: 0;
+  left: 0;
   width: 100%;
-  overflow: hidden;
+  z-index: 1000;
+
+  padding: 10px 20px;
 }
 
 .flecha-izquierda,
@@ -43,8 +45,8 @@
 }
 
 .tarjeta-pelicula {
-  width: 250px;
-  height: 300px; 
+  width: 300px;
+  height: 350px; 
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
@@ -105,3 +107,12 @@
   padding: 15px;
   color: aliceblue;
 }
+ 
+  @media (max-width: 768px) {
+    .tarjeta-pelicula-container-wrapper {
+      overflow-x: auto; /* Permite desplazamiento en pantallas pequeñas */
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+  }
+  

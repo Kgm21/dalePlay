@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './error.css';
 
 const Error = () => {
-  return (
-    <div className='content'>Error</div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Error
+  const handleGoHome = () => {
+    navigate('/'); 
+  };
+
+  return (
+    <div className='content'>
+      <button className="btn-home" onClick={handleGoHome}>Volver a Inicio</button>
+    </div>
+  );
+};
+
+export default Error;

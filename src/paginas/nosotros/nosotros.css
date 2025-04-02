@@ -4,8 +4,11 @@ body {
  }
 
 .bs_miembro_img img {
-   width: 150px; /* Ajusta el ancho deseado */
-   height: 150px; /* Ajusta la altura deseada */
-   object-fit: cover; /* Esto asegura que la imagen se ajuste bien sin deformarse */
+   width: 150px; 
+   height: 150px; 
+   object-fit: cover;
+}
+ .titulo{
+  color:white;
+
  }
- 

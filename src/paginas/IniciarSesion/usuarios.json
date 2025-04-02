@@ -1,0 +1,10 @@
+{
+    "admin": {
+    "hash": "$2b$10$mCuEkBtTS80GG9DhDIrgtu152MNvFqkimGdhQ.XRGTTbW3bbdNCwy",
+    "rol": "admin"
+    },
+    "user": {
+    "hash": "$2b$10$mCuEkBtTS80GG9DhDIrgtu152MNvFqkimGdhQ.XRGTTbW3bbdNCwy",
+    "rol": "usuario"
+    }
+    }
