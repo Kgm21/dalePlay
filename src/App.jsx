@@ -9,7 +9,8 @@ import Administracion from "./paginas/administracion/administracion";
 import Registro from "./paginas/registro/registro";
 import Contacto from "./paginas/contacto/contacto";
 import IniciarSesion from "./paginas/IniciarSesion/iniciarSesion";
-import DetallePelicula from "./paginas/DetallePelicula/detallePelicula";
+import DetallePelicula from "./paginas/DetallePelicula/DetallePelicula";
+
 function App() {
   return (
     <>
@@ -23,7 +24,7 @@ function App() {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/administracion" element={<Administracion />} />
-          <Route path="/detallepelicula" element={<DetallePelicula />} />
+          <Route path="/DetallePelicula" element={<DetallePelicula />} />
         </Routes>
       </BrowserRouter>
 
