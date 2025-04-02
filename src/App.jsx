@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbarcom from './components/navbar/navbar'; 
-import Nosotros from './paginas/Nosotros/Nosotros';
+import Nosotros from './paginas/nosotros/nosotros';
 import Footer from './components/footer/Footer';
 import Inicio from './paginas/Inicio/Inicio';
 import Administracion from './paginas/Administracion/Administracion';
