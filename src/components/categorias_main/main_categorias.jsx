@@ -33,11 +33,12 @@ function CategoriasPeliculas() {
 
     const handleMouseEnter = (tarjeta) => () => {
       const titulo = tarjeta.dataset.titulo;
-      const descripcion = tarjeta.dataset.descripcion;
       const overlay = tarjeta.querySelector('.card-overlay');
       if (overlay) {
-        tarjeta.querySelector('.card-overlay-titulo').textContent = titulo || '';
-        tarjeta.querySelector('.card-overlay-descripcion').textContent = descripcion || '';
+        const tituloElement = tarjeta.querySelector('.card-overlay-titulo');
+        if (tituloElement) {
+          tituloElement.textContent = titulo || '';
+        }
         overlay.style.opacity = 1;
       }
     };
@@ -144,7 +145,6 @@ function CategoriasPeliculas() {
                           className="tarjeta-pelicula"
                           key={pelicula.id}
                           data-titulo={pelicula.titulo}
-                          data-descripcion={pelicula.descripcion}
                         >
                           <Card>
                           <Card.Img
@@ -157,7 +157,6 @@ function CategoriasPeliculas() {
                           </Card>
                           <div className="card-overlay">
                             <div className="card-overlay-titulo"></div>
-                            <div className="card-overlay-descripcion"></div>
                           </div>
                         </div>
                       ))

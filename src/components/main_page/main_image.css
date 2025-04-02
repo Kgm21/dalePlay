@@ -1,5 +1,5 @@
 .main_page {
-  background-image: url('/lcdp.jpg'); 
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: white;
