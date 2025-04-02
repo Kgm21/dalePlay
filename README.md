@@ -22,9 +22,9 @@ Este proyecto fue creado para practicar las principales operaciones **CRUD** (Cr
 - **Interfaz amigable**: Maquetado con React-Bootstrap para un diseño responsivo y moderno.
 - **Navegación**: Rutas dinámicas y navegación fluida gracias a React Router.
 
-# 🔎 Ver respositorio [aquí] (https://github.com/Kgm21/dalePlay)
+#### 🔎 Ver respositorio [aquí] (https://github.com/Kgm21/dalePlay)
 
-# 📄 Ver demo [aquí] (https://devdaleplay.netlify.app/)
+#### 📄 Ver demo [aquí] (https://devdaleplay.netlify.app/)
 
 # 💻 Autores
 
