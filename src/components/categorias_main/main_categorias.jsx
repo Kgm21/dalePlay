@@ -1,6 +1,6 @@
 import React, { useEffect, useRef} from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import peliculasIniciales from '../Categorias_main/peliculas.json'
+import peliculasIniciales from './peliculas.json'
 import './main_categorias.css';
 
 
@@ -147,12 +147,13 @@ function CategoriasPeliculas() {
                           data-descripcion={pelicula.descripcion}
                         >
                           <Card>
-                            <Card.Img
-                              variant="top"
-                              src={pelicula.imagen ? `/${pelicula.imagen}` : '/placeholder.jpg'} // Sin /images/
-                              alt={pelicula.titulo || 'Sin título'}
-                              onError={(e) => (e.target.src = '/placeholder.jpg')} // Fallback
-                            />
+                          <Card.Img
+  variant="top"
+  src={pelicula.imagen ? `/${pelicula.imagen}` : '/placeholder.jpg'}
+  alt={pelicula.titulo || 'Sin título'}
+  onError={(e) => (e.target.src = '/placeholder.jpg')}
+/>
+{console.log(pelicula.imagen)} 
                           </Card>
                           <div className="card-overlay">
                             <div className="card-overlay-titulo"></div>

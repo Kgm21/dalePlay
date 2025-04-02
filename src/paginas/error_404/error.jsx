@@ -10,7 +10,7 @@ const Error = () => {
   };
 
   return (
-    <div className='content'>
+    <div className='content-error'>
       <button className="btn-home" onClick={handleGoHome}>Volver a Inicio</button>
     </div>
   );
