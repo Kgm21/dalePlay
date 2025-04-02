@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbarcom from './components/navbar/Navbar'; 
+import Navbarcom from './components/Navbar/Navbar'; 
 import Nosotros from './paginas/Nosotros/Nosotros';
 import Footer from './components/Footer/Footer';
 import Inicio from './paginas/Inicio/Inicio';
