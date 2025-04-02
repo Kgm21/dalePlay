@@ -10,6 +10,7 @@ import Administracion from './paginas/Administracion/Administracion';
 import Registro from './paginas/Registro/Registro';
 import Contacto from './paginas/Contacto/Contacto';
 import IniciarSesion from './paginas/IniciarSesion/iniciarSesion';
+import Error from './paginas/error 404/error';
 
 function App() {
     
@@ -38,6 +39,8 @@ function App() {
                 <Route path='/nosotros' element={<Nosotros />} />
                 <Route path='/contacto' element={<Contacto />} />
                 <Route path='/administracion' element={<Administracion />} />
+                <Route path='/error' element={<Error />} />
+            
             </Routes>
 
             

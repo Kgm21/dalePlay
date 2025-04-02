@@ -14,10 +14,10 @@ const Footer = ({ usuarioAutenticado }) => {
             <img src="/img1.png" alt="DalePLay Logo" className="footer-logo" />
           </Col>
 
-          {/* Navegación */}
+          
           <Col lg={4} md={4} sm={12} className="mb-3 mb-md-0 text-center">
             <Nav className="d-flex flex-column align-items-center">
-              {/* Conditionally set the "Inicio" link based on usuarioAutenticado */}
+             
               <Nav.Link
                 as={Link}
                 to={usuarioAutenticado ? "/inicio" : "/"}
@@ -28,7 +28,7 @@ const Footer = ({ usuarioAutenticado }) => {
               <Nav.Link as={Link} to="/nosotros" className="nav-link-custom">
                 Nosotros
               </Nav.Link>
-              <Nav.Link as={Link} to="/contacto" className="nav-link-custom">
+              <Nav.Link as={Link} to="/error" className="nav-link-custom">
                 Contacto
               </Nav.Link>
             </Nav>
