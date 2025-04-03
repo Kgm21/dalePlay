@@ -12,23 +12,13 @@ import Contacto from './paginas/contacto/contacto';
 import IniciarSesion from './paginas/IniciarSesion/iniciarSesion';
 import Error from './paginas/error_404/error';
 import DetallePelicula from './paginas/DetallePelicula/detallePelicula'
-import peliculasIniciales from '../src/components/categorias_main/peliculas.json'; 
 
 function App() {
     
     const [usuarioAutenticado, setUsuarioAutenticado] = useState(false);
-     const [peliculas, setPeliculas] = useState([]);
+
    
     useEffect(() => {
-
-        const peliculasGuardadas = JSON.parse(localStorage.getItem('peliculas'));
-            if (peliculasGuardadas && peliculasGuardadas.length > 0) {
-              setPeliculas(peliculasGuardadas);
-            } else {
-              setPeliculas(peliculasIniciales);
-              localStorage.setItem('peliculas', JSON.stringify(peliculasIniciales));
-            }
-
         const usuario = localStorage.getItem("usuario");
         setUsuarioAutenticado(!!usuario); 
     }, []);
@@ -51,7 +41,8 @@ function App() {
                 <Route path='/contacto' element={<Contacto />} />
                 <Route path='/administracion' element={<Administracion />} />
                 <Route path='/error' element={<Error />} />
-                <Route path='/DetallePelicula' element={<DetallePelicula/>} />
+                <Route path="/detalle/:id" element={<DetallePelicula />} />
+
             
             </Routes>
 

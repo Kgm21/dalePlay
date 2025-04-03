@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Modal, Form } from 'react-bootstrap';
 import { BsStar, BsStarFill } from 'react-icons/bs';
-import peliculasIniciales from '../../components/categorias_main/peliculas.json'
+import peliculasIniciales from '../../components/categorias_main/peliculas.json';
 import './administracion.css';
 
 const Administracion = () => {
@@ -14,7 +14,11 @@ const Administracion = () => {
     const peliculasGuardadas = JSON.parse(localStorage.getItem('peliculas'));
     if (peliculasGuardadas && peliculasGuardadas.length > 0) {
       setPeliculas(peliculasGuardadas);
-    } 
+    } else {
+      // Si no hay datos en localStorage, cargar desde peliculas.json
+      setPeliculas(peliculasIniciales);
+      localStorage.setItem('peliculas', JSON.stringify(peliculasIniciales));
+    }
   }, []);
 
   // Guardar películas en localStorage cuando cambien
@@ -37,7 +41,7 @@ const Administracion = () => {
     if (peliculaSeleccionada) {
       setFormData(peliculaSeleccionada);
     } else {
-      setFormData({ codigo: null, nombre: '', categoria: '', descripcion: '', publicada: false,  imagen: '', });
+      setFormData({ codigo: null, nombre: '', categoria: '', descripcion: '', publicada: false, imagen: '' });
     }
   }, [peliculaSeleccionada]);
 
@@ -53,14 +57,13 @@ const Administracion = () => {
   // Guardar una película
   const guardarPelicula = (e) => {
     e.preventDefault();
-    // Encontrar el código más alto y sumar 1 para nuevas películas
     const maxCodigo = peliculas.length > 0 ? Math.max(...peliculas.map(p => p.codigo)) : 0;
     const nuevoCodigo = peliculaSeleccionada ? peliculaSeleccionada.codigo : maxCodigo + 1;
 
     const nuevaPelicula = {
       ...formData,
       codigo: nuevoCodigo,
-      imagen: peliculaSeleccionada ? peliculaSeleccionada.imagen : 'images/default.jpeg', // Imagen predeterminada para nuevas películas
+      imagen: peliculaSeleccionada ? peliculaSeleccionada.imagen : 'images/default.jpeg',
     };
 
     if (peliculaSeleccionada) {
@@ -91,11 +94,20 @@ const Administracion = () => {
     })));
   };
 
+  // Función para restaurar manualmente desde peliculas.json
+  const restaurarPeliculas = () => {
+    setPeliculas(peliculasIniciales);
+    localStorage.setItem('peliculas', JSON.stringify(peliculasIniciales));
+  };
+
   return (
     <Container className="py-5">
       <h1 className="mb-4 text-center">Administración</h1>
-      <Button variant="primary" className="mb-4" onClick={() => setMostrarModal(true)}>
+      <Button variant="primary" className="mb-4 me-2" onClick={() => setMostrarModal(true)}>
         Agregar Nueva Película/Serie
+      </Button>
+      <Button variant="warning" className="mb-4" onClick={restaurarPeliculas}>
+        Restaurar Películas desde JSON
       </Button>
 
       <Table striped bordered hover responsive>
