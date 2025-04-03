@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Modal, Form } from 'react-bootstrap';
 import { BsStar, BsStarFill } from 'react-icons/bs';
-import peliculasIniciales from '../../components/categorias_main/peliculas.json'; 
+import peliculasIniciales from '../../components/categorias_main/peliculas.json'
 import './administracion.css';
 
 const Administracion = () => {
@@ -29,6 +29,7 @@ const Administracion = () => {
     categoria: '',
     descripcion: '',
     publicada: false,
+    imagen: '',
   });
 
   // Cargar datos en el formulario cuando editamos
@@ -36,7 +37,7 @@ const Administracion = () => {
     if (peliculaSeleccionada) {
       setFormData(peliculaSeleccionada);
     } else {
-      setFormData({ codigo: null, nombre: '', categoria: '', descripcion: '', publicada: false });
+      setFormData({ codigo: null, nombre: '', categoria: '', descripcion: '', publicada: false,  imagen: '', });
     }
   }, [peliculaSeleccionada]);
 
@@ -59,7 +60,7 @@ const Administracion = () => {
     const nuevaPelicula = {
       ...formData,
       codigo: nuevoCodigo,
-      imagen: peliculaSeleccionada ? peliculaSeleccionada.imagen : '', // Mantenemos la imagen si editamos
+      imagen: peliculaSeleccionada ? peliculaSeleccionada.imagen : 'images/default.jpeg', // Imagen predeterminada para nuevas películas
     };
 
     if (peliculaSeleccionada) {
