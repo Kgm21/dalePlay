@@ -1,11 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import peliculas from "../../components/categorias_main/peliculas.json";
+import peliculasIniciales from "../../components/categorias_main/peliculas.json"; // JSON inicial
 import "./main_categorias.css";
 
 function CategoriasPeliculas() {
   const contenedorPeliculasRefs = useRef({});
   const [desplazamientos, setDesplazamientos] = React.useState({});
+  const [peliculas, setPeliculas] = useState([]); // Estado para las películas
+
+  // Cargar películas desde localStorage o JSON al montar el componente
+  useEffect(() => {
+    const peliculasGuardadas = JSON.parse(localStorage.getItem("peliculas"));
+    if (peliculasGuardadas && peliculasGuardadas.length > 0) {
+      setPeliculas(peliculasGuardadas);
+    } else {
+      setPeliculas(peliculasIniciales);
+      localStorage.setItem("peliculas", JSON.stringify(peliculasIniciales));
+    }
+  }, []);
 
   // Agrupar películas por categoría correctamente
   const categorias = Object.values(
@@ -166,7 +178,7 @@ function CategoriasPeliculas() {
                               alt={pelicula.titulo || "Sin título"}
                               onError={(e) =>
                                 (e.target.src = "/images/placeholder.jpg")
-                              } // Fallback
+                              }
                             />
                           </Card>
                           <div className="card-overlay">
