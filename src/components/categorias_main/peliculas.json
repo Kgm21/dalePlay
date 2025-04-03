@@ -5,7 +5,7 @@
     "categoria": "Comedia ",
     "descripcion": "Un cirujano plástico (Adam Sandler) finge estar casado y le pide a su asistente (Jennifer Aniston) que se haga pasar por su esposa para conquistar a otra mujer, lo que genera enredos divertidos.",
     "imagen": "images/unaesposadementira.jpeg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -23,7 +23,7 @@
     "categoria": "Comedia ",
     "descripcion": "Un tímido empleado de banco (Jim Carrey) encuentra una máscara mágica que lo transforma en un personaje extravagante con poderes caricaturescos. ",
     "imagen": "images/lamascara.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
 
@@ -33,7 +33,7 @@
     "categoria": "Comedia ",
     "descripcion": "Una periodista intenta espantar a un hombre en 10 dias para un artículo, sin saber que él apuesta lo contrario.",
     "imagen": "images/cmperderunhombre.webp",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
 
@@ -43,7 +43,7 @@
     "categoria": "Comedia ",
     "descripcion": "Una jefa obliga a su asistente a fingir un matrimonio para evitar ser deportada, pero el plan se complica con el amor.",
     "imagen": "images/lapropuesta.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -52,7 +52,7 @@
     "categoria": "Terror | Suspenso",
     "descripcion": "Basada en hechos reales, sigue a los investigadores paranormales Ed y Lorraine Warren, quienes ayudan a una familia aterrorizada por una presencia demoníaca en su casa.",
     "imagen": "images/elconjuro.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -61,16 +61,16 @@
     "categoria": "Terror | Suspenso",
     "descripcion": "Una monja y un sacerdote investigan una abadía en Rumania tras el suicidio de una hermana. Pronto descubren la presencia de Valak, una entidad demoníaca aterradora.",
     "imagen": "images/La-monja.webp",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
     "codigo": 8,
-    "nombre": "Annbelle",
+    "nombre": "Annabelle",
     "categoria": "Terror | Suspenso",
     "descripcion": "-Narra el origen de la muñeca poseída Annabelle, que causa eventos aterradores en la vida de una pareja tras ser maldecida por miembros de un culto satánico.",
     "imagen": "images/annabelle.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -79,7 +79,7 @@
     "categoria": "Terror | Suspenso",
     "descripcion": "Un grupo de niños enfrenta sus peores miedos cuando el aterrador payaso Pennywise emerge para aterrorizar su pueblo cada 27 años. Basada en la novela de Stephen King.",
     "imagen": "images/it.webp",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -88,7 +88,7 @@
     "categoria": "Terror | Suspenso",
     "descripcion": "Ambientada entre Alien(1979) y Aliens(1986),combina terror y acción en la lucha por la supervivencia.",
     "imagen": "images/AlienRomulus.webp",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -97,7 +97,7 @@
     "categoria": "Ciencia Ficción | Aventura",
     "descripcion": "Un soldado humano se infiltra en los Navi en el planeta Pandora, pero termina luchando por su supervivencia y la de su nuevo hogar.",
     "imagen": "images/avatar.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -106,7 +106,7 @@
     "categoria": "Ciencia Ficción | Aventura",
     "descripcion": "Un grupo de atronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
     "imagen": "images/in.jpeg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -115,7 +115,7 @@
     "categoria": "Ciencia Ficción | Aventura",
     "descripcion": "Científicos crean dinosaurios clonados en un parque temático,pero todo se sale de control.",
     "imagen": "images/jurassicpark.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -124,7 +124,7 @@
     "categoria": "Ciencia Ficción | Aventura",
     "descripcion": "Un joven granjero se une a la lucha contra el imperio en una galaxia muy muy lejana.",
     "imagen": "images/starwars.webp",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -133,7 +133,7 @@
     "categoria": "Ciencia Ficción | Aventura",
     "descripcion": "Los superhéroes más poderosos de la Tierra se unen para detener a Loki y salvar el mundo.",
     "imagen": "images/losvengadores.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -142,7 +142,7 @@
     "categoria": "Series",
     "descripcion": "Una joven americana se muda a París por trabajo y navega entre el amor, la moda y la cultura francesa.",
     "imagen": "images/emilyinparis.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
   {
@@ -151,8 +151,8 @@
     "categoria": "Series",
     "descripcion": "Un misterioso encargado de edificio manipula a los inquilinos mientras oculta oscuros secretos.",
     "imagen": "images/elencargado.jpg",
-    "publicada": false,
-    "destacada": false
+    "publicada": true,
+    "destacada": true
   },
   {
     "codigo": 18,
@@ -160,7 +160,7 @@
     "categoria": "Series",
     "descripcion": "Un brillante pero sarcástico doctor resuelve casos médicos complejos con métodos poco convencionales.",
     "imagen": "images/drhouse.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
 
@@ -170,7 +170,7 @@
     "categoria": "Series",
     "descripcion": "Un grupo de niños enfrenta fuerzas sobrenaturales cuando su amigo desaparece en un misterioso pueblo.",
     "imagen": "images/strangerthings.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   },
 
@@ -180,7 +180,7 @@
     "categoria": "Series",
     "descripcion": "Un profesor de química se convierte en narcotraficante tras ser diagnosticado con cáncer.",
     "imagen": "images/brakingbad.jpg",
-    "publicada": false,
+    "publicada": true,
     "destacada": false
   }
 ]

@@ -29,3 +29,10 @@
     background-color: #ffaa00;
     transform: scale(1.1);
 }
+@media (min-width: 768px) {
+    .content-error{
+        max-height: 100%;
+        
+    }
+  }
+  

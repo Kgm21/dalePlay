@@ -7,7 +7,7 @@ import CategoriasPeliculas from '../../components/categorias_main/main_categoria
 
 const Inicio = () => {
   return (
-    <div className='content'>
+    <div className='content-main'>
       <MainPage />
       <CategoriasPeliculas/>
 
