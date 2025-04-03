@@ -43,10 +43,10 @@ const Nosotros = () => {
          Cada gran historia necesita un equipo excepcional, y 'Dale Play' no es la excepción. Detrás de este apasionante proyecto hay un grupo de visionarios que combinaron talento, creatividad y dedicación para dar vida a una experiencia única. Ellos no solo comparten una pasión por el cine, sino también un compromiso por conectar contigo a través de cada detalle. Te invitamos a descubrir quiénes son los arquitectos de esta maravillosa aventura cinematográfica.
          </p>
       </section>
-      <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-4 justify-content-center align-items-center">
+      <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center align-items-stretch">
          {equipo.map((member, index) => (
-           <div key={index} className={`col my-4 ${member.bgColor} border border-primary rounded`}>
-            <figure className="d-flex justify-content-center align-items-center text-center flex-column">
+           <div key={index} className={`col my-4 ${member.bgColor} border border-primary rounded tarjeta-nosotros`}>
+            <figure className="d-flex flex-column justify-content-between align-items-center text-center h-100">
                <div className="bs_miembro_img py-2">
                   <img
                   src={member.image}
@@ -54,7 +54,7 @@ const Nosotros = () => {
                   className="img-fluid rounded-circle"
                  />
                </div>
-               <figcaption>
+               <figcaption className="nosotros-figcaption p-3">
                   <h4 style={{ color: 'black', fontWeight: 'bold' }}>{member.name}</h4>
                   <h5 style={{ color: 'black', fontSize: '14px' }}>{member.role}</h5>
                   <p style={{ color: 'black' }}>{member.description}</p>

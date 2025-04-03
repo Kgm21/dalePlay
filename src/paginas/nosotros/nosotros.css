@@ -1,14 +1,37 @@
 body {
-   background-color:#1a2a44; 
+   background-color: #1a2a44; 
    color: #65f0f0;
  }
-
-.bs_miembro_img img {
+ 
+ .bs_miembro_img img {
    width: 150px; 
    height: 150px; 
    object-fit: cover;
-}
- .titulo{
-  color:white;
-
+ }
+ 
+ .titulo {
+   color: white;
+ }
+ 
+ /* Clase específica para las tarjetas */
+ .tarjeta-nosotros {
+   min-height: 450px; /* Alto fijo para todas las tarjetas */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+ 
+ /* Clase específica para el figcaption */
+ .nosotros-figcaption {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+ 
+ /* Control del texto dentro de las tarjetas */
+ .nosotros-figcaption p {
+   max-height: 200px; /* Limita la altura del texto */
+   overflow-y: auto; /* Scroll si el texto es muy largo */
+   margin: 0; /* Evita márgenes adicionales */
  }

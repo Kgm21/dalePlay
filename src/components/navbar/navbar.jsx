@@ -46,7 +46,7 @@ function Navbarcom({ usuarioAutenticado, setUsuarioAutenticado }) {
                         ) : (
                             <>
                                 <Nav.Link as={Link} to="/" className="nav-link-custom">Iniciar Sesión</Nav.Link>
-                                <Nav.Link as={Link} to="/error" className="nav-link-custom">Registro</Nav.Link>
+                                <Nav.Link as={Link} to="/registro" className="nav-link-custom">Registro</Nav.Link>
                                 <Nav.Link as={Link} to="/nosotros" className="nav-link-custom">Nosotros</Nav.Link>
                             </>
                         )}
