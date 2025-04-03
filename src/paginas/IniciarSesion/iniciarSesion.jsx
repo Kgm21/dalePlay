@@ -50,7 +50,7 @@ const IniciarSesion = ({ setUsuarioAutenticado }) => {
     };
 
     return (
-        <Container className="container">
+        <Container className="container-login">
             <Row className="d-flex justify-content-start">
                 <Col md={4}>
                     <div className="form-container">

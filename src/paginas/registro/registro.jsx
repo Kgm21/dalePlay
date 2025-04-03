@@ -86,12 +86,12 @@ const Registro = () => {
           password: "",
           confirmPassword: "",
         });
-        setTimeout(() => navigate("/iniciar-sesion"), 2000); // Redirige tras 2 segundos
+        setTimeout(() => navigate("/"), 2000); 
       }
     };
   
     return (
-      <Container className="container">
+      <Container className="container-registro">
         <Row className="d-flex justify-content-start">
           <Col md={4}>
             <div className="form-container">
@@ -111,6 +111,7 @@ const Registro = () => {
                     value={formData.nombre}
                     onChange={handleChange}
                     isInvalid={!!errors.nombre}
+                    required 
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.nombre}
@@ -126,6 +127,7 @@ const Registro = () => {
                     value={formData.username}
                     onChange={handleChange}
                     isInvalid={!!errors.username}
+                    required 
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.username}
@@ -141,6 +143,7 @@ const Registro = () => {
                     value={formData.email}
                     onChange={handleChange}
                     isInvalid={!!errors.email}
+                    required 
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.email}
@@ -156,6 +159,7 @@ const Registro = () => {
                     value={formData.password}
                     onChange={handleChange}
                     isInvalid={!!errors.password}
+                    required 
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.password}
@@ -171,15 +175,14 @@ const Registro = () => {
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     isInvalid={!!errors.confirmPassword}
+                    required 
                   />
                   <Form.Control.Feedback type="invalid">
                     {errors.confirmPassword}
                   </Form.Control.Feedback>
                 </Form.Group>
   
-                {errors.submit && (
-                  <Alert variant="danger">{errors.submit}</Alert>
-                )}
+                {errors.submit && <Alert variant="danger">{errors.submit}</Alert>}
   
                 <Button variant="primary" type="submit" className="w-100">
                   Registrarse
@@ -189,7 +192,7 @@ const Registro = () => {
               <div className="text-center mt-3">
                 <p className="form-label">
                   ¿Ya tienes cuenta?{" "}
-                  <Link to="/iniciar-sesion" className="text-decoration-none">
+                  <Link to="/" className="text-decoration-none">
                     Inicia sesión aquí
                   </Link>
                 </p>
