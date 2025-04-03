@@ -11,7 +11,7 @@ import Registro from './paginas/registro/registro';
 import Contacto from './paginas/contacto/contacto';
 import IniciarSesion from './paginas/IniciarSesion/iniciarSesion';
 import Error from './paginas/error_404/error';
-import DetallePelicula from './paginas/DetallePelicula/detallePelicula'
+import DetallePelicula from './paginas/detallePelicula/detallePelicula'
 
 function App() {
     
