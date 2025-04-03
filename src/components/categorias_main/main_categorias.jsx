@@ -1,32 +1,42 @@
-import React, { useEffect, useRef} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import peliculas from '../../components/categorias_main/peliculas.json';
+import peliculasIniciales from '../../components/categorias_main/peliculas.json'; // JSON inicial
 import './main_categorias.css';
-
 
 function CategoriasPeliculas() {
   const contenedorPeliculasRefs = useRef({});
   const [desplazamientos, setDesplazamientos] = React.useState({});
-  
+  const [peliculas, setPeliculas] = useState([]); // Estado para las películas
 
- // Agrupar películas por categoría correctamente
- const categorias = Object.values(
-  peliculas.reduce((acc, pelicula) => {
-    if (!acc[pelicula.categoria]) {
-      acc[pelicula.categoria] = {
-        categoria: pelicula.categoria,
-        peliculas: [],
-      };
+  // Cargar películas desde localStorage o JSON al montar el componente
+  useEffect(() => {
+    const peliculasGuardadas = JSON.parse(localStorage.getItem('peliculas'));
+    if (peliculasGuardadas && peliculasGuardadas.length > 0) {
+      setPeliculas(peliculasGuardadas);
+    } else {
+      setPeliculas(peliculasIniciales);
+      localStorage.setItem('peliculas', JSON.stringify(peliculasIniciales));
     }
-    acc[pelicula.categoria].peliculas.push({
-      id: pelicula.codigo,
-      titulo: pelicula.nombre,
-      imagen: pelicula.imagen,
-      descripcion: pelicula.descripcion,
-    });
-    return acc;
-  }, {})
-);
+  }, []);
+
+  // Agrupar películas por categoría correctamente
+  const categorias = Object.values(
+    peliculas.reduce((acc, pelicula) => {
+      if (!acc[pelicula.categoria]) {
+        acc[pelicula.categoria] = {
+          categoria: pelicula.categoria,
+          peliculas: [],
+        };
+      }
+      acc[pelicula.categoria].peliculas.push({
+        id: pelicula.codigo,
+        titulo: pelicula.nombre,
+        imagen: pelicula.imagen,
+        descripcion: pelicula.descripcion,
+      });
+      return acc;
+    }, {})
+  );
 
   useEffect(() => {
     const tarjetasPelicula = document.querySelectorAll('.tarjeta-pelicula');
@@ -147,13 +157,12 @@ function CategoriasPeliculas() {
                           data-titulo={pelicula.titulo}
                         >
                           <Card>
-                          <Card.Img
-                             variant="top"
-                            src={pelicula.imagen ? `/${pelicula.imagen}` : '/images/placeholder.jpg'}
+                            <Card.Img
+                              variant="top"
+                              src={pelicula.imagen ? `/${pelicula.imagen}` : '/images/placeholder.jpg'}
                               alt={pelicula.titulo || 'Sin título'}
-                              onError={(e) => (e.target.src = '/images/placeholder.jpg')} // Fallback
-                                />
-
+                              onError={(e) => (e.target.src = '/images/placeholder.jpg')}
+                            />
                           </Card>
                           <div className="card-overlay">
                             <div className="card-overlay-titulo"></div>

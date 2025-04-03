@@ -14,10 +14,7 @@ const Administracion = () => {
     const peliculasGuardadas = JSON.parse(localStorage.getItem('peliculas'));
     if (peliculasGuardadas && peliculasGuardadas.length > 0) {
       setPeliculas(peliculasGuardadas);
-    } else {
-      setPeliculas(peliculasIniciales);
-      localStorage.setItem('peliculas', JSON.stringify(peliculasIniciales));
-    }
+    } 
   }, []);
 
   // Guardar películas en localStorage cuando cambien
