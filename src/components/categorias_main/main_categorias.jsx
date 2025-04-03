@@ -1,49 +1,48 @@
-import React, { useEffect, useRef} from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import peliculas from '../../components/categorias_main/peliculas.json';
-import './main_categorias.css';
-
+import React, { useEffect, useRef } from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import peliculas from "../../components/categorias_main/peliculas.json";
+import "./main_categorias.css";
 
 function CategoriasPeliculas() {
   const contenedorPeliculasRefs = useRef({});
   const [desplazamientos, setDesplazamientos] = React.useState({});
-  
 
- // Agrupar películas por categoría correctamente
- const categorias = Object.values(
-  peliculas.reduce((acc, pelicula) => {
-    if (!acc[pelicula.categoria]) {
-      acc[pelicula.categoria] = {
-        categoria: pelicula.categoria,
-        peliculas: [],
-      };
-    }
-    acc[pelicula.categoria].peliculas.push({
-      id: pelicula.codigo,
-      titulo: pelicula.nombre,
-      imagen: pelicula.imagen,
-      descripcion: pelicula.descripcion,
-    });
-    return acc;
-  }, {})
-);
+  // Agrupar películas por categoría correctamente
+  const categorias = Object.values(
+    peliculas.reduce((acc, pelicula) => {
+      if (!acc[pelicula.categoria]) {
+        acc[pelicula.categoria] = {
+          categoria: pelicula.categoria,
+          peliculas: [],
+        };
+      }
+      acc[pelicula.categoria].peliculas.push({
+        id: pelicula.codigo,
+        titulo: pelicula.nombre,
+        imagen: pelicula.imagen,
+        descripcion: pelicula.descripcion,
+      });
+      return acc;
+    }, {})
+  );
 
   useEffect(() => {
-    const tarjetasPelicula = document.querySelectorAll('.tarjeta-pelicula');
+    const tarjetasPelicula = document.querySelectorAll(".tarjeta-pelicula");
 
     const handleMouseEnter = (tarjeta) => () => {
       const titulo = tarjeta.dataset.titulo;
-      const descripcion = tarjeta.dataset.descripcion;
-      const overlay = tarjeta.querySelector('.card-overlay');
+      const overlay = tarjeta.querySelector(".card-overlay");
       if (overlay) {
-        tarjeta.querySelector('.card-overlay-titulo').textContent = titulo || '';
-        tarjeta.querySelector('.card-overlay-descripcion').textContent = descripcion || '';
+        const tituloElement = tarjeta.querySelector(".card-overlay-titulo");
+        if (tituloElement) {
+          tituloElement.textContent = titulo || "";
+        }
         overlay.style.opacity = 1;
       }
     };
 
     const handleMouseLeave = (tarjeta) => () => {
-      const overlay = tarjeta.querySelector('.card-overlay');
+      const overlay = tarjeta.querySelector(".card-overlay");
       if (overlay) {
         overlay.style.opacity = 0;
       }
@@ -52,8 +51,8 @@ function CategoriasPeliculas() {
     tarjetasPelicula.forEach((tarjeta) => {
       const enterHandler = handleMouseEnter(tarjeta);
       const leaveHandler = handleMouseLeave(tarjeta);
-      tarjeta.addEventListener('mouseenter', enterHandler);
-      tarjeta.addEventListener('mouseleave', leaveHandler);
+      tarjeta.addEventListener("mouseenter", enterHandler);
+      tarjeta.addEventListener("mouseleave", leaveHandler);
       tarjeta._enterHandler = enterHandler;
       tarjeta._leaveHandler = leaveHandler;
     });
@@ -61,10 +60,10 @@ function CategoriasPeliculas() {
     return () => {
       tarjetasPelicula.forEach((tarjeta) => {
         if (tarjeta._enterHandler) {
-          tarjeta.removeEventListener('mouseenter', tarjeta._enterHandler);
+          tarjeta.removeEventListener("mouseenter", tarjeta._enterHandler);
         }
         if (tarjeta._leaveHandler) {
-          tarjeta.removeEventListener('mouseleave', tarjeta._leaveHandler);
+          tarjeta.removeEventListener("mouseleave", tarjeta._leaveHandler);
         }
       });
     };
@@ -79,14 +78,17 @@ function CategoriasPeliculas() {
     const contenedorWidth = contenedor.parentElement.offsetWidth || 0;
     const contenidoWidth = contenedor.scrollWidth || 0;
     const maxDesplazamiento = 0;
-    const minDesplazamiento = contenidoWidth > contenedorWidth ? -(contenidoWidth - contenedorWidth) : 0;
+    const minDesplazamiento =
+      contenidoWidth > contenedorWidth
+        ? -(contenidoWidth - contenedorWidth)
+        : 0;
 
     return { min: minDesplazamiento, max: maxDesplazamiento };
   };
 
   const moverIzquierda = (categoriaId) => {
     const { min, max } = getLimites(categoriaId);
-    setDesplazamientos(prev => {
+    setDesplazamientos((prev) => {
       const current = prev[categoriaId] || 0;
       let newDisplacement = current + 200;
       if (newDisplacement > max) {
@@ -94,14 +96,14 @@ function CategoriasPeliculas() {
       }
       return {
         ...prev,
-        [categoriaId]: newDisplacement
+        [categoriaId]: newDisplacement,
       };
     });
   };
 
   const moverDerecha = (categoriaId) => {
     const { min, max } = getLimites(categoriaId);
-    setDesplazamientos(prev => {
+    setDesplazamientos((prev) => {
       const current = prev[categoriaId] || 0;
       let newDisplacement = current - 200;
       if (newDisplacement < min) {
@@ -109,7 +111,7 @@ function CategoriasPeliculas() {
       }
       return {
         ...prev,
-        [categoriaId]: newDisplacement
+        [categoriaId]: newDisplacement,
       };
     });
   };
@@ -121,7 +123,9 @@ function CategoriasPeliculas() {
           <div key={categoria.categoria}>
             <Row>
               <Col xs={12}>
-                <h2 className='text_categoria'>{categoria.categoria || 'Sin categoría'}</h2>
+                <h2 className="text_categoria">
+                  {categoria.categoria || "Sin categoría"}
+                </h2>
               </Col>
               <Col xs={12}>
                 <div className="tarjeta-pelicula-container-wrapper">
@@ -133,31 +137,49 @@ function CategoriasPeliculas() {
                   </button>
                   <div
                     className="tarjeta-pelicula-container"
-                    ref={(el) => (contenedorPeliculasRefs.current[categoria.categoria] = el)}
+                    ref={(el) =>
+                      (contenedorPeliculasRefs.current[categoria.categoria] =
+                        el)
+                    }
                     style={{
-                      transform: `translateX(${desplazamientos[categoria.categoria] || 0}px)`
+                      transform: `translateX(${
+                        desplazamientos[categoria.categoria] || 0
+                      }px)`,
                     }}
                   >
-                    {categoria.peliculas && Array.isArray(categoria.peliculas) ? (
+                    {categoria.peliculas &&
+                    Array.isArray(categoria.peliculas) ? (
                       categoria.peliculas.map((pelicula) => (
                         <div
                           className="tarjeta-pelicula"
                           key={pelicula.id}
                           data-titulo={pelicula.titulo}
-                          data-descripcion={pelicula.descripcion}
                         >
                           <Card>
-                          <Card.Img
-                             variant="top"
-                            src={pelicula.imagen ? `/${pelicula.imagen}` : '/images/placeholder.jpg'}
-                              alt={pelicula.titulo || 'Sin título'}
-                              onError={(e) => (e.target.src = '/images/placeholder.jpg')} // Fallback
-                                />
-
+                            <Card.Img
+                              variant="top"
+                              src={
+                                pelicula.imagen
+                                  ? `/${pelicula.imagen}`
+                                  : "/images/placeholder.jpg"
+                              }
+                              alt={pelicula.titulo || "Sin título"}
+                              onError={(e) =>
+                                (e.target.src = "/images/placeholder.jpg")
+                              } // Fallback
+                            />
                           </Card>
                           <div className="card-overlay">
-                            <div className="card-overlay-titulo"></div>
-                            <div className="card-overlay-descripcion"></div>
+                            <a
+                              href={`/detalle?id=${pelicula.id}`}
+                              style={{
+                                textDecoration: "none",
+                                color: "inherit",
+                              }}
+                            >
+                              {" "}
+                              <div className="card-overlay-titulo"></div>
+                            </a>
                           </div>
                         </div>
                       ))

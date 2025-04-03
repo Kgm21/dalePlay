@@ -11,7 +11,7 @@ import Registro from "./paginas/registro/registro";
 import Contacto from "./paginas/contacto/contacto";
 import IniciarSesion from "./paginas/IniciarSesion/iniciarSesion";
 import Error from "./paginas/error_404/error";
-import DetallePelicula from "./paginas/DetallePelicula/detalle";
+import DetallePelicula from "./paginas/detallePelicula/detallePelicula";
 
 function App() {
   const [usuarioAutenticado, setUsuarioAutenticado] = useState(false);
@@ -41,7 +41,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/administracion" element={<Administracion />} />
         <Route path="/error" element={<Error />} />
-        <Route path="/DetallePelicula" element={<DetallePelicula />} />
+        <Route path="/detalle" element={<DetallePelicula />} />
       </Routes>
 
       <Footer usuarioAutenticado={usuarioAutenticado} />
